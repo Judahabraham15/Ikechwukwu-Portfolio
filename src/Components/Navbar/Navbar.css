@@ -1,0 +1,49 @@
+.nav {
+  position: fixed;
+  top: 2vh;
+  left: 0;
+  right: 0;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+   background: rgba(255, 255, 255, 0.095);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 0 2rem;
+  font-family: 'Nunito';
+}
+
+.nav-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white ;
+  letter-spacing: 1px;
+}
+.dev{
+    color: rgb(14 165 233) ;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links li a:hover {
+  color: rgb(14 165 233) ;
+}
