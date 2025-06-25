@@ -1,7 +1,9 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { useEffect  } from 'react'
+import { motion , useScroll , useSpring , useTransform} from 'framer-motion'
+import { useEffect , useRef  } from 'react'
+import { FaGithub, FaLinkedin, FaTwitter , FaWhatsapp } from 'react-icons/fa'
 import './Hero.css'
+import Button from '../Button/Button'
 
 const Hero = () => {
     useEffect(()=>{
@@ -30,9 +32,32 @@ const Hero = () => {
 
   //   }
   // ]
+   const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  });
+
+  const borderRadius = useSpring(
+    useTransform(scrollYProgress, [0, 0.7], ["0px", "40px"]),
+    { stiffness: 60, damping: 18 }
+  );
+  const scale = useSpring(
+    useTransform(scrollYProgress, [0, 0.7], [1, 0.95]),
+    { stiffness: 60, damping: 18 }
+  );
+    const y = useSpring(
+    useTransform(scrollYProgress, [0, 0.7], [0, -80]),
+    { stiffness: 60, damping: 18 }
+  );
+
   return (
-    <div className='hero'>
+    <motion.div  ref={heroRef}
+      className="hero"
+      id="home"
+      style={{ borderRadius, scale, y, position: "relative", overflow: "hidden" }}>
       <div className="hero-content">
+        
         <div className="content">
           <h1>
             Heyy{' '}
@@ -65,17 +90,34 @@ const Hero = () => {
               <path d="M46.2744 22.2801C45.0744 19.9551 41.3244 20.1051 37.4994 24.3051C34.7994 27.2301 34.2744 28.2051 31.5744 28.1301V25.0551C31.5744 25.0551 25.7994 20.7801 14.3244 22.7301C14.3244 22.7301 7.79945 23.6301 7.79945 27.0801C7.79945 27.0801 6.67445 35.4051 8.99945 40.6551C12.4494 48.4551 30.1494 50.4801 35.6994 37.2051C36.8244 34.5801 39.0744 32.6301 41.0994 30.1551C43.4244 27.1551 47.5494 24.7551 46.2744 22.2801Z" fill="#8C644D"></path>
               <path d="M46.2745 22.28C46.0495 21.83 45.7495 21.53 45.3745 21.23C45.4495 21.305 45.5245 21.38 45.5245 21.53C46.7995 24.08 42.6745 26.405 40.1995 29.405C38.1745 31.88 35.9245 33.83 34.7995 36.455C29.9995 47.93 16.0495 47.93 10.1995 42.68C15.5245 48.68 30.5245 49.28 35.5495 37.205C36.6745 34.58 38.9245 32.63 40.9495 30.155C43.4245 27.155 47.5495 24.755 46.2745 22.28ZM32.3245 28.13C27.4495 26.33 18.7495 29.63 19.9495 38.405C19.9495 30.23 27.3745 28.205 31.4245 28.205C32.0245 28.13 32.3245 28.13 32.3245 28.13Z" fill="#BF9169"></path>
             </motion.svg>
-            {' '}! I am Micheal Ikechukwu. <span id='ChangedText'> FrontEnd Engineer</span>
+            {' '}! I am Micheal Ikechukwu. <span id='ChangedText'> Frontend Engineer</span>
           </h1>
           <p> I’m a frontend developer passionate about crafting modern, responsive web experiences using React. I focus on building clean, interactive UIs with a strong eye for design and usability. From reusable components to smooth animations, I love turning ideas into sleek, functional interfaces.</p>
+        </div>
+        <div className="button-contain">
+           <Button title={'Get in Touch'}/>
         </div>
         <div className="text-section">
           <div className="strengths">
 
           </div>
         </div>
+        <div className="socials">
+  <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">
+    <FaGithub />
+  </a>
+  <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">
+    <FaLinkedin />
+  </a>
+  <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">
+    <FaTwitter />
+  </a>
+  <a href='#' target='_blank' className='social-icon'>
+    <FaWhatsapp/>
+  </a>
+</div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
