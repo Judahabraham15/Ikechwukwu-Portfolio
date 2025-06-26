@@ -1,8 +1,18 @@
 import React from 'react'
 import './Navbar.css'
+import { useState , useEffect } from 'react'
 const Navbar = () => {
-  return (
-    <nav className='nav'>
+  const[scrolled , setScrolled] = useState(false);
+  useEffect(()=>{
+     const HandleScroll = () => { 
+    setScrolled(window.scrollY > 80)
+  }
+  window.addEventListener('scroll' , HandleScroll)
+  return () => window.removeEventListener('scroll', HandleScroll);
+  } , [])
+ 
+     return (
+    <nav className={`nav ${scrolled ? 'nav-scroll' : ''}`}>
       <h1 className=' nav-header'>Dev<span className="dev">Chuks</span></h1>
       <ul className="nav-links">
         <li className='HideonMobile'><a href="#about">About</a></li>

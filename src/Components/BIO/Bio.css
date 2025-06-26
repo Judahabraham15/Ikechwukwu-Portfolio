@@ -1,0 +1,48 @@
+.bio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 80vh;
+    color: black;
+    font-family: 'Nunito';
+    gap: 48px;            
+    padding: 16px 0;
+}
+
+.image-content {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;      
+}
+
+.img {
+   max-width: 350px;  
+    min-width: 180px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.bio-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: flex-start;    
+    width: auto;
+    height: 100%;
+ 
+}
+.bio-content h1{
+    font-size: 40px;
+}
+.bio-content p{
+    max-width: 500px;
+    margin-top: 30px;
+    color:black
+}

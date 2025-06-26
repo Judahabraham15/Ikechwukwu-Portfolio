@@ -82,6 +82,49 @@
 .social-icon:hover {
   background: rgb(14 165 233);
 }
+.bg-icons{
+  color:#1e293b;
+  font-size: 2rem;
+}
+.strengths {
+  display: flex;
+  flex-wrap: wrap;              
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;        
+  width: 100%;                    
+  gap: 48px;                 
+  font-family: 'Nunito';
+  margin: 32px 0 0 0;             
+}
+
+.core {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  color: #fff;
+}
+.core span {
+  font-size: 1.8rem;
+  color: #0ea5e9;
+}
+
+.core p {
+  font-size: 0.8rem;
+  margin: 0;
+  color: #fff;
+  opacity: 0.85;
+  text-align: center;
+}
+.button-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0 0 0;
+  width:100%;
+}
 @media (max-width: 576px) {
 .content h1{
     font-size: 25px;

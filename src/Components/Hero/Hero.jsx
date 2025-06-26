@@ -1,11 +1,15 @@
 import React from 'react'
 import { motion , useScroll , useSpring , useTransform} from 'framer-motion'
 import { useEffect , useRef  } from 'react'
-import { FaGithub, FaLinkedin, FaTwitter , FaWhatsapp } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaTwitter , FaWhatsapp , FaCapsules , FaPrescriptionBottle , FaPills , FaReact ,FaCogs , FaBug , FaUserMd , FaTerminal,   FaHeartbeat, FaBriefcaseMedical,
+  FaSyringe,
+  FaBandAid} from 'react-icons/fa'
+  import { PiFlowArrowBold } from 'react-icons/pi'
 import './Hero.css'
 import Button from '../Button/Button'
 
 const Hero = () => {
+
     useEffect(()=>{
         const textElement = document.getElementById('ChangedText');
         const textArray = ['Pharmacist' , 'React Developer', 'Frontend Engineer'];
@@ -26,12 +30,36 @@ const Hero = () => {
 
   }, [])
 
-  // const sections = [
-  //   {
-  //     num : '70%',
-
-  //   }
-  // ]
+  const bgIcons = [
+  { icon: <FaCapsules />, style: { top: '12%', left: '8%'} },
+  { icon: <FaPills />, style: { top: '30%', left: '85%' }},
+  { icon: <FaReact />, style: { top: '60%', left: '12%' }},
+  { icon: <FaPrescriptionBottle/>, style: { top: '70%', left: '80%' }},
+  { icon: <FaCogs />, style: { top: '15%', left: '60%' } },
+  { icon: <FaUserMd />, style: { top: '80%', left: '45%' } },
+  { icon: <FaTerminal />, style: { top: '50%', left: '50%' } },
+  { icon: <FaBug />, style: { top: '65%', left: '65%' } },
+  { icon: <FaSyringe />, style: { top: '25%', left: '35%' } },
+  { icon: <FaHeartbeat />, style: { top: '50%', left: '80%' }, color: "#fbc02d" },
+  { icon: <FaBandAid />, style: { top: '40%', left: '20%' }, color: "#0288d1" },
+  { icon: <FaBriefcaseMedical />, style: { top: '10%', left: '75%' }, color: "#7b1fa2" },
+  { icon: <PiFlowArrowBold />, style: { top: '85%', left: '25%' }, color: "#d81b60" },
+ 
+  ]
+  const summaries = [
+    {
+      num: '90%',
+      text:'Collaborations'
+    },
+    {
+      num:'80%',
+      text:'Pressure Handling'
+    },
+    {
+      num:'+50%',
+      text:'Consumer Satisfied'
+    }
+  ]
    const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -39,7 +67,7 @@ const Hero = () => {
   });
 
   const borderRadius = useSpring(
-    useTransform(scrollYProgress, [0, 0.7], ["0px", "40px"]),
+    useTransform(scrollYProgress, [0, 0.7], ["0px", "90px"]),
     { stiffness: 60, damping: 18 }
   );
   const scale = useSpring(
@@ -56,13 +84,37 @@ const Hero = () => {
       className="hero"
       id="home"
       style={{ borderRadius, scale, y, position: "relative", overflow: "hidden" }}>
+
+        {bgIcons.map(({ icon, style }, idx) => (
+      <motion.div
+        className="bg-icons"
+        key={idx}
+        style={{ ...style, position: 'absolute', zIndex: 0 }}
+        animate={{
+          rotate: [0, 15, -15, 0],
+          x: [0, 10, -10, 0],
+          y: [0, -10, 10, 0],
+        }}
+        transition={{
+          duration: 4 + (idx % 3), 
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: "easeInOut",
+          delay: idx * 0.2
+        }}
+      >
+        {icon}
+      </motion.div>
+    ))}
+
+       
       <div className="hero-content">
         
         <div className="content">
           <h1>
             Heyy{' '}
            <motion.svg
-              width="36"
+              width="36" 
               height="36"
               viewBox="0 0 48 48"
               fill="none"
@@ -94,13 +146,17 @@ const Hero = () => {
           </h1>
           <p> I’m a frontend developer passionate about crafting modern, responsive web experiences using React. I focus on building clean, interactive UIs with a strong eye for design and usability. From reusable components to smooth animations, I love turning ideas into sleek, functional interfaces.</p>
         </div>
+        <div className="strengths">
+          {summaries.map(({num , text} , index)=>(
+         <div className="core" key={index}>
+            <span>{num}</span>
+            <p>{text}</p>
+          </div>
+     ))}
+          
+        </div>
         <div className="button-contain">
            <Button title={'Get in Touch'}/>
-        </div>
-        <div className="text-section">
-          <div className="strengths">
-
-          </div>
         </div>
         <div className="socials">
   <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">
