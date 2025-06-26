@@ -11,7 +11,7 @@ const Button = ({ title, style, className, icon }) => {
       >
       <p>{title}</p>
         <div className="icon">
-         
+         { icon ? (icon) : null}
         </div>
       </button>
     </div>
