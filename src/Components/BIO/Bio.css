@@ -5,10 +5,10 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    min-height: 80vh;
+    min-height: 100vh;
     color: black;
     font-family: 'Nunito';
-    gap: 48px;            
+    gap: 60px;            
     padding: 16px 0;
     margin-top: 60px;
 }
@@ -45,7 +45,9 @@
 .bio-content p{
     max-width: 500px;
     margin-top: 30px;
-    color:black
+    color:black;
+    font-size: 16px;
+    line-height: 1.4;
 }
 .core-list{
     display: flex;
