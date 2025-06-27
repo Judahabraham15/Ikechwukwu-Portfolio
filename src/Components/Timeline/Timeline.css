@@ -47,6 +47,9 @@
 .container h1{
     margin-bottom: 5px;
 }
+.container p{
+  color: #334155
+}
 .timeline-contain{
     display: flex;
     flex-direction: column;
@@ -97,7 +100,6 @@
 }
 .active {
   background-color: grey !important;
-  color: #0ea5e9;
   font-weight: 700;
   padding: 0.8rem 1.2rem; 
   transition: background 0.2s, color 0.2s, border 0.2s;

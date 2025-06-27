@@ -21,10 +21,12 @@
   max-width: 800px;
   margin: 0 auto;
 }
-
+.pp{
+    color:  #334155;
+}
 .cards {
   background:#d1d5db; 
-   color :black;
+   color : #334155;
   border-radius: 14px;
   box-shadow: 0 6px 32px rgba(14, 165, 233, 0.13), 0 1.5px 4px rgba(0,0,0,0.06);
   min-height: 320px;

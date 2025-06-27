@@ -1,0 +1,93 @@
+.contact-text{
+    display: flex;
+    justify-content: flex-start;
+    align-items:center ;
+    width: 100%;
+    flex-direction: column;
+}
+.contacts{
+     padding: 48px 0 48px 0;
+     min-height: 100vh;
+}
+.contact-text p{
+    color:  #334155;
+}
+.contacts-grid{
+ display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+.first-section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 6em;
+    gap: 20px;
+}
+.apple{
+    color: #334155;
+}
+.social{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+}
+.social button{
+    display: inline-flex;
+     align-items: center;
+    justify-content: center;
+    background-color: #23272f;
+    padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+     transition: background 0.2s;
+}
+.social button:hover {
+    background-color: #353945; 
+}
+.inputs  , .text-area{
+  padding: 18px;
+  max-width: 280px;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+  background-color: #e6f4ea;
+  border: none;
+  height: 1.5rem;
+  font-family: 'Nunito';
+  font-size: 17px;
+}
+.text-area{
+  height: 10rem;
+  resize: none;
+  font-family: 'Nunito';
+}
+.contact-form{
+  width: 360px;
+  position: relative;
+}
+.contact-forms{
+  position: relative;
+  margin-bottom: 30px;
+}
+.error-mess{
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: -10px;
+    right: 30px;
+}
+.input-section {
+  padding: 1.2rem 1rem;
+  min-width: 220px;
+  width: 100%;
+  height: fit-content;
+  font-family: 'Nunito';
+  margin-top: 6em;
+}

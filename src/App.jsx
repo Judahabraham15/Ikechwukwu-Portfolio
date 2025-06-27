@@ -1,6 +1,7 @@
 import './App.css'
 import Bio from './Components/BIO/Bio'
 import Button from './Components/Button/Button'
+import Contacts from './Components/Contacts/Contacts'
 import Expertise from './Components/Expertise/Expertise'
 import Hero from './Components/Hero/Hero'
 import Navbar from './Components/Navbar/Navbar'
@@ -18,6 +19,7 @@ function App() {
     <Expertise/>
     <Timeline/>
     <Projects/>
+    <Contacts/>
         </>
   )
 }
