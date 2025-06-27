@@ -82,6 +82,7 @@
 .time-btn{
     display: flex;
     gap: 20px;
+    margin-top: 25px;
 }
 .time-btn button{
   display: inline-flex;
@@ -93,6 +94,13 @@
     border: none;
     color: white;
     cursor: pointer;
+}
+.active {
+  background-color: grey !important;
+  color: #0ea5e9;
+  font-weight: 700;
+  padding: 0.8rem 1.2rem; 
+  transition: background 0.2s, color 0.2s, border 0.2s;
 }
 @media (max-width: 676px) {
   .timeline {

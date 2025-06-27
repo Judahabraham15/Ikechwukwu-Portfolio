@@ -4,6 +4,7 @@ import Button from './Components/Button/Button'
 import Expertise from './Components/Expertise/Expertise'
 import Hero from './Components/Hero/Hero'
 import Navbar from './Components/Navbar/Navbar'
+import Projects from './Components/Projects/Projects'
 import Timeline from './Components/Timeline/Timeline'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <Bio/>
     <Expertise/>
     <Timeline/>
+    <Projects/>
         </>
   )
 }

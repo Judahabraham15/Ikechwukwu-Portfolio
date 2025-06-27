@@ -1,22 +1,23 @@
 import {  useState } from 'react'
 import './Timeline.css'
-import { FaCode, FaProjectDiagram, FaReact, FaUserFriends , FaSchool , FaRegCalendarAlt} from 'react-icons/fa'
-import { FaGraduationCap } from "react-icons/fa";
+import { FaCode,FaLaptopCode, FaReact, FaUserFriends , FaSchool , FaRegCalendarAlt} from 'react-icons/fa'
+import { FaGraduationCap , FaBriefcase} from "react-icons/fa";
 import { MdLocalPharmacy } from "react-icons/md";
 import { motion } from 'framer-motion'
+import { text } from 'framer-motion/client';
 
 
 const Timeline = () => {
       const Timelines = [
-    { title: "Started Coding", desc: "Began my coding journey in 2022, learning HTML and CSS.", side: "left", icon: <FaCode color="#0ea5e9" />},
-    { title: "First Project", desc: "Built my first to-do app and a frontend Blinkist clone in 2024.", side: "right", icon: <FaProjectDiagram color="#0ea5e9"/>  },
-    { title: "React & Tailwind", desc: "Dove into React.js and Tailwind CSS for modern UI development.", side: "left", icon: <FaReact color="#0ea5e9" /> },
+    { title: "Started Coding", desc: "Began my coding journey in 2024, learning HTML and CSS.", side: "left", icon: <FaCode color="#0ea5e9" />},
+    { title: "Web Developer", desc: "Freelance", side: "right", icon: <FaLaptopCode color="#0ea5e9"/> , icons:<FaRegCalendarAlt color='grey'size={20}/>, text: '2024- Present'},
+    { title: "React Developer", desc: "Dove into React.js for modern UI development.", side: "left", icon: <FaReact color="#0ea5e9" />, icons:<FaRegCalendarAlt color='grey' size={20}/>, text: '2025 - Present'},
     { title: "Freelancing", desc: "Yet to take collaborative Jobs.", side: "right", icon: <FaUserFriends color="#0ea5e9" /> }
   ];
   const Education = [
  { title: "Secondary School", desc: "ExtraPoint Model School", side: "left", icon: <FaSchool color="#0ea5e9" /> , icons:<FaRegCalendarAlt color='grey' size={20}/> , text:'2011 - 2017'},
-    { title: "B.sc Pharmacy", desc: "Madonna University", side: "right", icon: <MdLocalPharmacy color="#0ea5e9" /> , icons:<FaRegCalendarAlt color='grey' size={20}/> , text:'June 2018 - 2023'},
-    { title: "Web Development", desc: 'Learning and Practicing' ,side: "left", icon: <FaReact color="#0ea5e9" /> , text:'2024 - Present' , icons:<FaRegCalendarAlt color='grey' size={20}/>  },
+    {title:"B.sc Pharmacy" , desc :"Madonna University" , side: 'right' , icon: <MdLocalPharmacy color="#0ea5e9" /> , icons:<FaRegCalendarAlt color='grey' size={20}/> , text:'2018 - 2024'},
+    { title: "Web Development", desc: 'Learning and Practicing' ,side: "left", icon: <FaLaptopCode color="#0ea5e9" /> , text:'2024 - Present' , icons:<FaRegCalendarAlt color='grey' size={20}/>  },
     { title: "React Development", desc: "Learning and practicing", side: "right", icon: <FaReact color="#0ea5e9" /> , text:'2025 -Present' , icons:<FaRegCalendarAlt color='grey' size={20}/> }
 ];
 
@@ -35,8 +36,8 @@ const[activeTab , setActiveTab] = useState('Experience')
         <h1><span className='dev'>Experience</span> & Education</h1>
         <p>My professional journey and academic background</p>
         <div className="time-btn">
-            <button onClick={() => setActiveTab('Experience')} className={activeTab === "Experience" ? "active" : ""}>Experience</button>
-           <button onClick={() => setActiveTab('Education')} className={activeTab === "Education" ? "active" : ""}><FaGraduationCap/>Education</button>
+            <button onClick={() => setActiveTab('Experience')} className={activeTab === "Experience" ? "active" : ""}><FaBriefcase size={18} style={{verticalAlign:'middle' , marginRight:'8px'}}/>Experience</button>
+           <button onClick={() => setActiveTab('Education')} className={activeTab === "Education" ? "active" : ""}><FaGraduationCap size={18} style ={{ verticalAlign:'middle' , marginRight:'8px'}}/>Education</button>
         </div>
       </motion.div>
       <div className="timeline" style={{ position: 'relative' }}>
