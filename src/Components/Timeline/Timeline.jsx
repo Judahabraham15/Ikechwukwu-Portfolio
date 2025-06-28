@@ -25,7 +25,7 @@ const Timeline = () => {
   const dotPositions = ['7.5%', '33%', '59%', '86%'];
 const[activeTab , setActiveTab] = useState('Experience')
   return (
-    <div className='container' id='qualifications'>
+    <div className='container' id='experience'>
       <motion.div
         className="time-line"
         initial={{ opacity: 0, y: -30 }}

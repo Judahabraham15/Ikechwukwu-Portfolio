@@ -54,7 +54,7 @@ const iconHover = {
 
 const Expertise = () => {
   return (
-    <section className='skills'>
+    <section className='skills' id='skills'>
       <motion.div
         className="skills-content"
         initial={{ opacity: 0, y: -30 }}

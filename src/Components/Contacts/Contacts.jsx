@@ -18,7 +18,8 @@ const Contacts = () => {
         },
         {
             icon: <FaWhatsapp size={20} style={{ verticalAlign: 'middle', marginRight: '5px' }} />,
-            text: 'WhatsApp'
+            text: 'WhatsApp',
+            link:'https://wa.me/2348157902426'
         },
         {
             icon: <RiTwitterXFill size={20} style={{ verticalAlign: 'middle', marginRight: '5px' }} />,
@@ -133,7 +134,7 @@ const Contacts = () => {
   };
 
     return (
-        <div className='contacts'>
+        <div className='contacts' id='contact'>
             <motion.div
                 className="contact-text"
                 initial={{ opacity: 0, y: -40 }}
@@ -160,8 +161,9 @@ const Contacts = () => {
                                 href={link}
                                 key={idx}
                                 variants={itemVariants}
-                                whileHover={{ scale: 1.08, boxShadow: "0 4px 16px rgba(14,165,233,0.18)" }}
+                                whileHover={{ scale: 1.08, boxShadow: "0 4px 16px rgba(14,165,233,0.18)" , rotate: 2 }}
                                 style={{ textDecoration: "none" }}
+                                target='_blank'
                             >
                                 <button>{icon}{text}</button>
                             </motion.a>
@@ -195,7 +197,7 @@ const Contacts = () => {
                             {errors.email && <span className='error-mess'> {errors.email}</span>}
                         </div>
                         <div className="contact-forms">
-                            <textarea placeholder='Your Message' name='message' ref={textareaRef} className='text-area' id='message'></textarea>
+                            <textarea placeholder='Tell me about your project or how I can help...' name='message' ref={textareaRef} className='text-area' id='message'></textarea>
                             {errors.textarea && <span className='error-mess'> {errors.textarea}</span>}
                         </div>
                         <motion.button

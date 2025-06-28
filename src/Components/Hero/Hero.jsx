@@ -4,9 +4,11 @@ import { useEffect , useRef  } from 'react'
 import { FaGithub, FaLinkedin, FaTwitter , FaWhatsapp , FaCapsules , FaPrescriptionBottle , FaPills , FaReact ,FaCogs , FaBug , FaUserMd , FaTerminal,   FaHeartbeat, FaBriefcaseMedical,
   FaSyringe,
   FaBandAid} from 'react-icons/fa'
+  import { FiArrowRight } from 'react-icons/fi'
   import { PiFlowArrowBold } from 'react-icons/pi'
 import './Hero.css'
 import Button from '../Button/Button'
+import { span } from 'framer-motion/client'
 
 const Hero = () => {
 
@@ -78,7 +80,6 @@ const Hero = () => {
     useTransform(scrollYProgress, [0, 0.7], [0, -80]),
     { stiffness: 60, damping: 18 }
   );
-
   return (
     <motion.div  ref={heroRef}
       className="hero"
@@ -156,19 +157,27 @@ const Hero = () => {
           
         </div>
         <div className="button-contain">
-           <Button title={'Get in Touch'}/>
+          <a href='#contact' style={{textDecoration:'none'}}><Button title={'Get in Touch'} icon={
+           <motion.span 
+         whileHover={{ rotate: 10, scale: 1.2 }}
+            transition={{ type: 'spring', stiffness: 200 }}
+           style={{display:'inline-block'}}>
+              <FiArrowRight size={20}  style={{verticalAlign:'middle' , marginLeft: ' 8px'}} />
+           </motion.span>
+           }
+          /></a>
         </div>
         <div className="socials">
-  <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">
+  <a href="https://github.com/Ikechukwu001" target="_blank" rel="noopener noreferrer" className="social-icon">
     <FaGithub />
   </a>
-  <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">
+  <a href="https://www.linkedin.com/in/ikechukwu-michael-0159a5371?" target="_blank" rel="noopener noreferrer" className="social-icon">
     <FaLinkedin />
   </a>
-  <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">
+  <a href="https://twitter.com/Ikechukwu001" target="_blank" rel="noopener noreferrer" className="social-icon">
     <FaTwitter />
   </a>
-  <a href='#' target='_blank' className='social-icon'>
+  <a href='https://wa.me/2348157902426' target='_blank' className='social-icon'>
     <FaWhatsapp/>
   </a>
 </div>

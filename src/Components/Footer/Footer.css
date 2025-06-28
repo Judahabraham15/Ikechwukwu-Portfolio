@@ -1,0 +1,12 @@
+.footer{
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Nunito';
+    border-top: 1px solid gray;
+    min-height: 10vh;
+    padding: 10px 10rem 0 10rem;
+}
+.footer p{
+    font-weight:700;
+}

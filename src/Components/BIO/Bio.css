@@ -95,3 +95,8 @@
     color: white;
     cursor: pointer;
 }
+@media(max-width:576px){
+    .bio{
+        display: none;
+    }
+}
