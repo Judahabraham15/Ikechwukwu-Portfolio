@@ -115,3 +115,8 @@
         font-size: 14px;
     }
 }
+@media(min-width:480px) and (max-width:576px){
+    .img{
+        max-width: 400px;
+    }
+}

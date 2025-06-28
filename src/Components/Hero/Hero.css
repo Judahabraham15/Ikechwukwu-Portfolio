@@ -161,9 +161,7 @@
     .bg-icons{
       display: none;
     }
-
-    /* I haven't reduced the size. REMEBER!!!
      .content svg{
-      font-size: 10px !important;
-    } */
+     width:24px;
+    }
 }
