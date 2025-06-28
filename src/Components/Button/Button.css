@@ -12,3 +12,14 @@
 .button p{
 font-size: 17px;
 }
+@media(max-width:480px){
+  .button{
+    padding: 1.1em;
+  
+    font-size: 13px;
+  }
+  .button p{
+    font-size: 15px !important;
+    font-weight: 400;
+  }
+}

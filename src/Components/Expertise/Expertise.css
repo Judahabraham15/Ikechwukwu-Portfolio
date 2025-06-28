@@ -113,3 +113,8 @@
     color: #fff;
     border-color: #0ea5e9;
 }
+@media(max-width:576px){
+    .skills{
+        display: none;
+    }
+}

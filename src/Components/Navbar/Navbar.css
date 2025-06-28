@@ -50,8 +50,16 @@
 .nav-scroll{
   background-color:rgba(0, 0, 0, 0.79);
 }
+@media (max-width:576px){
+   .nav-header{
+    font-size:1.3rem;
+   } 
+}
 @media (max-width:801px){
   .HideonMobile{
     display:none;
+  }
+  .nav{
+    width:89%;
   }
 }

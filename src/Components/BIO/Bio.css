@@ -97,6 +97,21 @@
 }
 @media(max-width:576px){
     .bio{
-        display: none;
+     flex-direction: column;
+     padding: 16px;
+    }
+    .core-list{
+     display:grid;
+     grid-template-columns: repeat(2 , minmax(0 , 1fr));
+     width:90%;
+    }
+    .coress{
+        flex-direction: column;
+    }
+    .img{
+        max-width:350px;    
+    }
+    .bio-content p{
+        font-size: 14px;
     }
 }

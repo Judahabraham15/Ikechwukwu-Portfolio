@@ -88,7 +88,7 @@
 }
 .strengths {
   display: flex;
-  flex-wrap: wrap;              
+  flex-wrap: nowrap;              
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;        
@@ -135,14 +135,21 @@
      max-width: 450px;
      font-weight:200;
 }
- 
+  .strengths span{
+  font-size: 20px !important;
+  }
+  .strengths p{
+    font-size: 10px;
+     width: 100%;
+  text-align: center;
+  }
 .socials{
      position: static;        
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 16px;                
-    margin: 16px 0 0 0;       
+    margin: 20px 0 0 0;       
     transform: none;          
     margin-right: 0; 
 }
@@ -151,4 +158,12 @@
         height: 36px;
         font-size: 1rem;
     }
+    .bg-icons{
+      display: none;
+    }
+
+    /* I haven't reduced the size. REMEBER!!!
+     .content svg{
+      font-size: 10px !important;
+    } */
 }
