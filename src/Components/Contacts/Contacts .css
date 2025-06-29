@@ -127,9 +127,109 @@ padding: 6px;
   box-shadow: 0 4px 24px rgba(14, 165, 233, 0.40), 0 1.5px 4px rgba(0,0,0,0.08);
 border-radius: 8px;
 }
-@media(max-width:576px){
-    .contacts{
-        display: none;
-    }
+@media (max-width: 576px) {
+  .contacts{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+.contacts-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+  .first-section {
+    margin-top: 2em;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .first-section h1{
+    font-size: 28px;
+  }
+  .input-section {
+    margin-top: 2em;
+    width: 100%;
+  }
+  .input-section h2{
+    align-self: center;
+    text-align: center;
+  }
+.inputs , .text-area{
+    max-width: 100%;
 }
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+  }
+  .contact-text{
+    margin-bottom: 20px;
+  }
+  .contact-text p{
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.75rem;
+  }
+  .error-mess {
+    font-size: 11px;
+    right: 10px;
+    top: -8px;
+  }
+  .popup {
+    margin-right: 0;
+    justify-content: center;
+  }
+  .popup-card {
+    max-width: 90vw;
+    font-size: 14px;
+    padding: 4px;
+  }
+  .social {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center !important;
+    margin-top: 15px;
+  }
+  .social button {
+    font-size: 14px;
+    padding: 0.8rem 1rem;
+  }
 
+}
+ @media(min-width:577px) and (max-width:768px){
+     .contacts{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+    .contacts-grid{
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+.first-section{
+      align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+ .first-section h1{
+    font-size: 1.7rem;
+  }
+.input-section{
+    margin-top: 0;
+    width: 100%;
+}
+.input-section h2{
+  align-items: center;
+  text-align: center;
+  font-size: 1.7rem;
+}
+.inputs,.text-area{
+    max-width: 100%;
+}
+ .contact-form {
+    width: 100%;
+    max-width: 100%;
+  }
+ }

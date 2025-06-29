@@ -10,3 +10,18 @@
 .footer p{
     font-weight:700;
 }
+@media(max-width:576px){
+    .footer{
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 2rem 0 2rem;
+        gap:15px;
+    }
+    .footer p{
+        font-size: 13.5px;
+    }
+    .footer-content p{
+        font-size: 15px;
+        text-align:center;
+    }
+}

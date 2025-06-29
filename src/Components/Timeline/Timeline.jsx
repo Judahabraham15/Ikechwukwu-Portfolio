@@ -87,8 +87,8 @@ const[activeTab , setActiveTab] = useState('Experience')
               </h2>
               <p>{desc}</p>
               <div className="div" style={{margin:'0'}}>
-               <span>{icons}</span>
-               <p style={{fontSize:"18px" , color:'grey', margin:'0'}}>{text}</p>
+               <span className='ic'>{icons}</span>
+               <p style={{fontSize:"18px" , color:'grey', margin:'0'}} className='tit'>{text}</p>
               </div>
               
             </motion.div>
