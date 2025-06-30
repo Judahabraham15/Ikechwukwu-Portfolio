@@ -238,3 +238,8 @@ border-radius: 8px;
     line-height: 1.75rem;
   }
  }
+ @media(min-width:769px) and (max-width:800px){
+    .contacts{
+        display: none;
+    }
+}

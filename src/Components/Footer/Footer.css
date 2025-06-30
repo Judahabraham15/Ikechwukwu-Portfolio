@@ -25,3 +25,11 @@
         text-align:center;
     }
 }
+@media(min-width:577px) and (max-width:768px){
+    .footer{
+        flex-direction: column;
+        justify-content: center;
+        padding: 12px 1.5rem 12px 1.5rem;
+        gap:18px;
+    }
+}

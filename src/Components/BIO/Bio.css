@@ -99,6 +99,8 @@
     .bio{
      flex-direction: column;
      padding: 16px;
+     padding-top: 6rem;
+     padding-bottom: 6rem;
     }
     .core-list{
      display:grid;
@@ -120,6 +122,25 @@
         max-width: 400px;
     }
 }
-@media(min-width:577px) and (max-width:768px){
-    
+@media(min-width:577px) and (max-width:800px){
+    .bio{
+        flex-direction:column;
+        padding: 18px;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+    .core-list{
+        display: grid;
+        grid-template-columns: repeat(2 ,  minmax(0 , 1fr));
+        width: 90%;
+        gap: 2px;
+    }
+}
+@media(min-width:769px) and (max-width:800px){
+ 
+  .core-list{
+    display: grid;
+    grid-template-columns: repeat(4 , minmax(0 , 1fr));
+    max-width: 100%;
+  }
 }

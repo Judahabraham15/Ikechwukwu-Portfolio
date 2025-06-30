@@ -38,7 +38,7 @@ const Hero = () => {
   { icon: <FaReact />, style: { top: '60%', left: '12%' }},
   { icon: <FaPrescriptionBottle/>, style: { top: '70%', left: '80%' }},
   { icon: <FaCogs />, style: { top: '15%', left: '60%' } },
-  { icon: <FaUserMd />, style: { top: '80%', left: '45%' } },
+ 
   { icon: <FaTerminal />, style: { top: '50%', left: '50%' } },
   { icon: <FaBug />, style: { top: '65%', left: '65%' } },
   { icon: <FaSyringe />, style: { top: '25%', left: '35%' } },
@@ -88,19 +88,16 @@ const Hero = () => {
 
         {bgIcons.map(({ icon, style }, idx) => (
       <motion.div
-        className="bg-icons"
+       className="bg-icons"
         key={idx}
         style={{ ...style, position: 'absolute', zIndex: 0 }}
         animate={{
-          rotate: [0, 15, -15, 0],
-          x: [0, 10, -10, 0],
-          y: [0, -10, 10, 0],
+          rotate: [0, 360],
         }}
         transition={{
-          duration: 4 + (idx % 3), 
+          duration: 16,
           repeat: Infinity,
-          repeatType: "loop",
-          ease: "easeInOut",
+          ease: "linear",
           delay: idx * 0.2
         }}
       >
