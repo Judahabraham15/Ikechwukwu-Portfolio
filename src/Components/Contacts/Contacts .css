@@ -231,5 +231,10 @@ border-radius: 8px;
  .contact-form {
     width: 100%;
     max-width: 100%;
+ }
+ .contact-text p{
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.75rem;
   }
  }

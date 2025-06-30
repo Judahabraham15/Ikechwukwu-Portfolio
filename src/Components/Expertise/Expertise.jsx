@@ -15,7 +15,7 @@ const cardIcon = [
     {
         icon: <SiTailwindcss size={30} style={{verticalAlign:'middle', marginRight:'8px', color:'#38BDF8'}}/>,
         title: 'Tailwind CSS',
-        collections: ['Responsive Design', 'Custom Theme', 'Components']
+        collections: ['Responsive Design', 'Custom Theme', 'Purge']
     },
     {
         icon:<FaJsSquare size={30} style={{verticalAlign:'middle', marginRight:'8px', color:'#F7DF1E'}}/>,
@@ -37,7 +37,7 @@ const cardIcons = [
     {
         icon: <MdOutlineBugReport size={28} style={{verticalAlign:'middle', marginRight:'8px', color:'#EF4444'}}/>,
         title: 'Testing & Debugging',
-        collection: ['Jest', 'React Testing Library', 'Chrome DevTools', 'Postman']
+        collection: ['Jest', 'React Testing Library', 'Chrome DevTools']
     }
 ]
 

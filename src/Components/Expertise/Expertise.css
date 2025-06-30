@@ -140,3 +140,37 @@
     font-size:2.2rem;
   }
 }
+@media (min-width:577px) and (max-width:768px) {
+  .skills {
+    padding: 48px 5px 48px 10px;
+    margin-top: 48px;
+  }
+  .skills-content h1 {
+    font-size: 2rem;
+  }
+  .skills-content p {
+    font-size: 16px;
+    max-width: 90vw;
+  }
+  .expertise {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  .card {
+    max-width: 320px;
+    min-width: 160px;
+    padding: 24px 16px 20px 16px;
+    height: 180px;
+  }
+  .exp h3, .exs h3 {
+    font-size: 2rem;
+    text-align: center;
+    align-self: center;
+    margin-bottom: 24px;
+  }
+  .collections span {
+    font-size: 13px;
+    padding: 6px 16px;
+  }
+}
