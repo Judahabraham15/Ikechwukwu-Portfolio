@@ -55,11 +55,16 @@
     font-size:1.3rem;
    } 
 }
-@media (max-width:801px){
+@media (max-width:800px){
   .HideonMobile{
     display:none;
   }
   .nav{
     width:89%;
+  }
+}
+@media(min-width:801px){
+  .menu-btn{
+    display: none;
   }
 }
