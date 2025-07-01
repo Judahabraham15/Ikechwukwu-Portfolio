@@ -1,0 +1,55 @@
+.sidebar{ 
+     position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  border-radius: 10px;
+  width: 50%;
+  z-index: 1000;
+  background-color:  rgba(15, 23, 42, 0.96);
+  backdrop-filter: blur(12px);
+  display: flex; 
+  flex-direction: column;
+  padding-top: 30px;
+  font-family: 'Nunito';
+  align-items: center;
+  pointer-events: none;
+  color: white;
+  transform: translateX(110%) scale(0.9);
+  padding-left: 2rem;
+  transition:  transform 0.5s cubic-bezier(0.77,0,0.175,1),
+    opacity 0.4s cubic-bezier(0.77,0,0.175,1);
+}
+.sidebar.open{
+    transform: translateX(0) scale(1);
+      opacity: 1;
+  pointer-events: auto;
+}
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar li {
+  list-style-type: none;
+  width: 100%;
+  font-size: 20px;
+
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  padding: 15px 20px;
+  display: block; 
+  text-align: left;
+  font-size: 15px;
+}
+@media(min-width:801px){
+    .sidebar{
+        display: none !important;
+    }
+}

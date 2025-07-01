@@ -17,6 +17,7 @@
   box-shadow: 0 4px 24px rgba(0,0,0,0.18);
   padding: 0 2rem;
   font-family: 'Nunito';
+
 }
 
 .nav-header {
@@ -59,12 +60,15 @@
   .HideonMobile{
     display:none;
   }
-  .nav{
-    width:89%;
-  }
+.nav{
+  width: 100%;
+}
 }
 @media(min-width:801px){
   .menu-btn{
+    display: none;
+  }
+  .sidebar{
     display: none;
   }
 }
